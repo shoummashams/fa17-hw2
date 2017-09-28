@@ -7,18 +7,18 @@ class Person
   end
 
   def nickname
-    # YOUR IMPLEMENTATION HERE
-    'delete_me'
+    name_string = @name.to_s
+    @nickname = name_string[0...4]
   end
 
   def birth_year
-    # YOUR IMPLEMENTATION HERE
-    1990
+    current_year = Time.now.year
+    @birth_year = current_year - @age.to_i
+    return @birth_year
   end
 
   def introduction
-    # YOUR IMPLEMENTATION HERE
-    'delete_me'
+    return @name.to_s, @age.to_s
   end
 
 end
