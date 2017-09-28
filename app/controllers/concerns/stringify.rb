@@ -7,6 +7,12 @@ class Stringify
   end
 
   def what_am_i
-  	# YOUR IMPLEMENTATION HERE
+  	your_name = @name.to_s
+  	your_adjective = @adjective.to_s
+  	if your_name == ' ' or your_adjective == ' '
+  		return 'You are nothing!'
+  	else
+  		return "<em>" << your_name << "</em> is so <em>" << your_adjective << "</em>"
+  	end
   end
 end
